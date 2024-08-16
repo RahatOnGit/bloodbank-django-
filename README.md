@@ -37,6 +37,9 @@ At the admin side, admin will be given the full permission over the system.
 Only admin can add, delete or update details of a donor.
              
 
+Simple Demo:
+-------------
+
 
 
 
