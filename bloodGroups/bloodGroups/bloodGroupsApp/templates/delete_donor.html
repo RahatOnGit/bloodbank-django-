@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="row mt-3">
+    <div class="col col-md-7 ml-2">
+        <div class="card card-body">
+
+            <table class="table">
+                <tr>
+                    
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Blood Group</th>
+                    <th>Address</th>
+                    
+                   
+
+                </tr>
+                 
+                <tr>
+
+                    <td>{{donor1.name}}</td>
+                    <td>{{donor1.phone}}</td>
+                    <td>{{donor1.blood_group}}</td>
+                    <td>{{donor1.house_details}} , {{donor1.upazila}} , {{donor1.district}}</td>
+
+
+                </tr>
+
+                
+            </table>
+            <hr>
+
+            <p>Do you really want to delete the donor?</p>
+            <div class="row">
+                <a class="btn btn-danger ml-3" href="{% url 'delete_ok' donor1.id%}">Yes</a> 
+                <a class="btn btn-info ml-3" href="{% url 'manage_donors' %}">No</a>
+ 
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

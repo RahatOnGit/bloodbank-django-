@@ -1,0 +1,95 @@
+{% extends 'main.html' %}
+
+{%block content%}
+
+
+
+<div class="card card-body">
+    
+      <form method="POST">
+        {% csrf_token %}
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Donor Name</label>
+              <div class="col-sm-3">
+                <input type="text" name="name" value="{{donor1.name}}" class="form-control" id="inputEmail3" placeholder="Name">
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-3">
+                  <input type="text" name= "phone" value="{{donor1.phone}}" class="form-control" id="inputEmail3" placeholder="Phone Number">
+                </div>
+              </div>
+           
+              
+
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Blood Group</label>
+                <div class="col-sm-3">
+                <select class="form-control" name="blood_group" id="bloodGroupSelect">
+                 
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+                </div>
+              </div>
+
+            
+
+              <div class="form-group row ">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Address</label>
+            
+                <div class="col-3">
+                  <textarea class="form-control" name="house" placeholder="House Details"> {{donor1.house_details}}</textarea>
+                   
+                </div>
+                <div class="col-3 ">
+                  <input type="text" class="form-control" value="{{donor1.upazila}}"  name="upazila" placeholder="Upazila">
+                </div>
+                <div class="col-3 ">
+                  <input type="text" class="form-control" value="{{donor1.district}}" name="district" placeholder="District">
+               
+            </div>
+              </div>
+
+             
+
+
+            
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-info">Submit</button>
+              </div>
+            </div>
+          </form>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Assume you have JavaScript variable `currentBloodGroup` that holds the current value from the database
+        var currentBloodGroup = "{{ donor1.blood_group }}";  // This value should come from your Django template or backend
+
+        // Get the <select> element
+        var selectElement = document.getElementById('bloodGroupSelect');
+
+        // Loop through options to find and select the correct one
+        for (var i = 0; i < selectElement.options.length; i++) {
+            if (selectElement.options[i].value === currentBloodGroup) {
+                selectElement.selectedIndex = i;
+                break;
+            }
+        }
+    });
+</script>
+
+
+
+
+
+{%endblock%}

@@ -1,0 +1,21 @@
+Super_user/ admin
+
+username : admin
+email    : rahat@gmail.com
+password : 1t43&8k1
+
+------------------------------------------------------------------------------------------
+
+users:
+
+username : iqbal
+email    : iqbal@gmail.com
+password : 1n43i8k1
+
+
+
+
+
+        
+   
+

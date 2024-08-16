@@ -1,0 +1,96 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<a class="btn btn-md btn-info mt-3 ml-5" href="{% url 'add_donor'%}">Add New Donor</a>
+   
+
+
+<div class="row mt-3 ">
+    <div class="col  ml-5 mr-5">
+        <div class="card card-body">
+        <form>
+           
+         <input type="text" class="col-4 mt-2" name="name" placeholder="Search by Name" ></input>
+
+          <input type="text" class="col-4 mt-2" name="phone_num" placeholder="Search by phone number"></input>
+
+          <button class="btn btn-outline-info" type="submit">Search</button>
+
+        </form>
+        
+
+       </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="row mt-3">
+    <div class="col  ml-5 mr-5">
+        <div class="card card-body">
+
+            <table class="table">
+                <tr>
+                    <th>sl.no</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Blood Group</th>
+                    <th>Address</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    
+                   
+
+                </tr>
+                 
+                {% for i in donors%}
+
+                <tr>
+
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.phone}}</td>
+                    <td>{{i.blood_group}}</td>
+                    <td>{{i.house_details}}
+                        <br>
+
+
+
+                        {{i.upazila}}
+                        <br>
+                        {{i.district}}
+                    </td>
+
+                    <td><a href="{% url 'update_donor' i.id%}" class="btn-sm btn-info" >Update</a></td>
+                    <td><a href="{% url 'delete_donor' i.id%}" class="btn-sm btn-danger" >Delete</a></td>
+
+
+
+                </tr>
+
+                
+
+                {% endfor %}
+
+
+
+
+
+
+            </table>
+        
+        
+        
+        </div>
+    </div>
+
+ </div>
+
+{% endblock %}

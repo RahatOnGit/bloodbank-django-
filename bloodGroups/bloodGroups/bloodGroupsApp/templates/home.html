@@ -1,0 +1,95 @@
+
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+{% for message in messages %}
+  <p style="color: red; ">{{message}}</p>
+
+{% endfor %}
+
+<div class="row mt-3 ">
+    <div class="col  ml-5 mr-5">
+        <div class="card card-body">
+        <form>
+
+     
+           
+           <select class="form-control col-2" name="blood_group" id="inputEmail3">
+            <option value="">Select blood group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+          
+          <input type="text" class="col-4 mt-2" name="address" placeholder="Search by address"></input>
+          <button class="btn btn-outline-info" type="submit">Search</button>
+
+        </form>
+
+       </div>
+
+    </div>
+
+</div>
+   
+<div class="row mt-3">
+    <div class="col  ml-5 mr-5">
+        <div class="card card-body">
+
+            <table class="table">
+                <tr>
+                    <th>sl.no</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Blood Group</th>
+                    <th>Address</th>
+                    
+                   
+
+                </tr>
+                 
+                {% for i in all_donors %}
+
+                <tr>
+
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.phone}}</td>
+                    <td>{{i.blood_group}}</td>
+                    <td>{{i.house_details}}
+                        <br>
+
+
+
+                        {{i.upazila}}
+                        <br>
+                        {{i.district}}
+                    </td>
+
+
+                </tr>
+
+                
+
+                {% endfor %}
+
+
+
+
+
+
+            </table>
+        
+        
+        
+        </div>
+    </div>
+
+ </div>
+
+{% endblock %}
