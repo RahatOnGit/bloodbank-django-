@@ -40,6 +40,30 @@ Only admin can add, delete or update details of a donor.
 Simple Demo:
 -------------
 
+* Donor side:
+
+![home](https://github.com/user-attachments/assets/a100fede-12e7-46d9-a0f6-a1d9514aa435)
+
+![home-1](https://github.com/user-attachments/assets/ce332532-9bdb-4eac-a27f-c58790472981)
+
+![home-2](https://github.com/user-attachments/assets/ebed7755-bf1d-45c7-8510-a752e4aa0747)
+
+
+![home-3](https://github.com/user-attachments/assets/7cce3c11-5fb9-4500-83ed-a10392d4ff55)
+
+
+
+* Admin side:
+
+![home-4](https://github.com/user-attachments/assets/9c07bb95-da64-4409-a3ce-9f0098a23008)
+
+
+![home-5](https://github.com/user-attachments/assets/bb159334-cd18-4ce8-9f69-7f4d2f2fa3d0)
+
+
+![home-6](https://github.com/user-attachments/assets/e5cf7fd1-06f2-4a7c-8ef9-4cc6b3f458e7)
+
+
 
 
 
