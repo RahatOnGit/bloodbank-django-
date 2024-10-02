@@ -1,4 +1,4 @@
-# bloodbank-django-
+# RoktoDhara
 This is a simple blood bank management system using Django (A python framework).
 
 Technologies used here are:
